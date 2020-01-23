@@ -7,7 +7,7 @@ variable "provider_vsphere_host" {
 
 variable "provider_vsphere_user" {
   description = "vSphere username to use to connect to the environment - Default: administrator@vsphere.local"
-  default = "administrator@vsphere.local"
+  default     = "administrator@vsphere.local"
 }
 
 variable "provider_vsphere_password" {
@@ -46,12 +46,12 @@ variable "guest_template" {
 
 variable "guest_vcpu" {
   description = "The number of virtual processors to assign to this virtual machine. Default: 1."
-  default = "1"
+  default     = "1"
 }
 
 variable "guest_memory" {
   description = "The size of the virtual machine's memory, in MB. Default: 1024 (1 GB)."
-  default = "1024"
+  default     = "1024"
 }
 
 variable "guest_ipv4_netmask" {
