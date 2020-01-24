@@ -127,4 +127,4 @@ If you're using Terraform to spin up multiple environments such as lab, dev, or 
 
 Resources can be destroyed using the `terraform destroy` command, which is similar to `terraform apply`, but it behaves as if all of the resources have been removed from the configuration.
 
-**Enjoy! :)**
+**Enjoy!** :)
