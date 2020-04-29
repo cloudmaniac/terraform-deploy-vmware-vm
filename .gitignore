@@ -1,0 +1,21 @@
+# Local .terraform directories
+.terraform/
+
+# Compiled .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Logs
+*.log
+
+# Ignore Mac .DS_Store files
+.DS_Store
+
+# Ignored vscode files
+.vscode/
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+#
+# example.tfvars
