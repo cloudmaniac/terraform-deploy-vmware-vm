@@ -40,6 +40,10 @@ variable "deploy_vsphere_network" {
 ##### Guest
 # - Describes virtual machine / guest options
 
+variable "guest_name_prefix" {
+  description = "VM / hostname prefix for the kubernetes cluster."
+}
+
 variable "guest_template" {
   description = "The source virtual machine or template to clone from."
 }
@@ -72,4 +76,36 @@ variable "guest_dns_suffix" {
 
 variable "guest_domain" {
   description = "The domain name for this machine."
+}
+
+variable "guest_ssh_user" {
+  description = "SSH username to connect to the guest VM."
+}
+
+variable "guest_ssh_password" {
+  description = "SSH password to connect to the guest VM."
+}
+
+variable "guest_ssh_key_private" {
+  description = "SSH private key (e.g., id_rsa) path."
+}
+
+variable "guest_ssh_key_public" {
+  description = "SSH public key (e.g., id_rsa.pub) path."
+}
+
+##### Master(s)
+# - Describes master(s) nodes options
+
+variable "master_ips" {
+  type        = map(any)
+  description = "List of IPs used for the kubernetes master nodes. 1 IP for a single master, or 3 for a multi-master configuration."
+}
+
+##### Worker(s)
+# - Describes workers(s) nodes (a.k.a., minions) options
+
+variable "worker_ips" {
+  type        = map(any)
+  description = "List of IPs used for the kubernetes worker nodes."
 }
