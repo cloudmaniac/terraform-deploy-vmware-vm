@@ -25,6 +25,7 @@ guest_ssh_password    = "VMware1!"
 guest_ssh_key_private = "~/.ssh/id_ed25519"
 guest_ssh_key_public  = "~/.ssh/id_ed25519.pub"
 guest_firmware        = "efi"
+
 # Master(s)
 master_ips = {
   "0" = "10.67.11.11"
