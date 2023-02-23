@@ -96,6 +96,7 @@ variable "guest_ssh_key_public" {
 
 variable "guest_firmware" {
   description = "Boot mode for cloned template i.e. efi, bios"
+  default     = "bios"
 }
 
 ##### Master(s)
