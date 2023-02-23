@@ -53,6 +53,7 @@ resource "vsphere_virtual_machine" "kubernetes_master" {
   resource_pool_id = data.vsphere_compute_cluster.target_cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.target_datastore.id
   folder           = var.deploy_vsphere_folder
+  firmware         = var.guest_firmware
 
   num_cpus = var.guest_vcpu
   memory   = var.guest_memory
@@ -133,6 +134,7 @@ resource "vsphere_virtual_machine" "kubernetes_workers" {
   resource_pool_id = data.vsphere_compute_cluster.target_cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.target_datastore.id
   folder           = var.deploy_vsphere_folder
+  firmware         = var.guest_firmware
 
   num_cpus = var.guest_vcpu
   memory   = var.guest_memory

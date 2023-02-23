@@ -94,6 +94,11 @@ variable "guest_ssh_key_public" {
   description = "SSH public key (e.g., id_rsa.pub) path."
 }
 
+variable "guest_firmware" {
+  description = "Boot mode for cloned template i.e. efi, bios"
+  default     = "bios"
+}
+
 ##### Master(s)
 # - Describes master(s) nodes options
 
